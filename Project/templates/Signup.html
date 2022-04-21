@@ -11,16 +11,18 @@
         body {
             margin: 0%;
             background-image: url(/images/black_signup.jpg);
+            background-repeat: no-repeat;
+            background-size: 100%;
+
         }
 
         .signup {
             margin: auto;
             height: 100%;
-            width: 50%;
+            width: 25%;
             border: 1px dotted hsl(0, 0%, 50%);
             padding: 10px;
             text-align: center;
-
         }
 
         h1 {
@@ -35,6 +37,51 @@
             height: 15%;
             margin-top: 5%;
         }
+
+        .a {
+            background-color: black;
+            border-color: ghostwhite;
+            color: rgb(69, 69, 69);
+            margin: 1%;
+            border: 1px solid;
+        }
+
+        .a:hover {
+            background-color: rgb(67, 67, 67);
+            border-color: white;
+            color: rgb(110, 110, 110);
+        }
+
+        .block {
+            text-align: center;
+            width: 80%;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        .block span {
+            position: relative;
+        }
+
+        .block span:before {
+            display: block;
+            width: 1000px;
+            content: '';
+            position: absolute;
+            border-bottom: 1px solid rgb(127, 127, 127);
+            top: 50%;
+            right: 200%;
+        }
+
+        .block span:after {
+            display: block;
+            width: 1000px;
+            content: '';
+            position: absolute;
+            border-bottom: 1px solid rgb(127, 127, 127);
+            top: 50%;
+            left: 200%;
+        }
     </style>
 
 </head>
@@ -43,12 +90,21 @@
 
     <div class="signup">
         <h1><img class="icon" src="./images/icon3@2x.png" alt=""></h1>
+        <h1>Регистрация</h1>
+        <input type="text" class="a" placeholder="Username"><br>
+        <input type="text" class="a" placeholder="E-mail or phone number"><br>
+        <input type="password" class="a" placeholder="Password"><br>
+        <a href="/index"><button type="submit" class="a">Продолжить</button></a><br>
+
+        <h3 style="color: rgb(69, 69, 69);">
+            <div class="block"><span>или</span></div>
+        </h3>
+        <h1>Вход</h1>
+        <input type="text" class="a" placeholder="Username or E-mail"><br>
+        <input type="password" class="a" placeholder="Password"><br>
+        <a href="/index"><button type="submit" class="a"> Войти </button></a>
+
     </div>
-
-    <div class="signin">
-
-    </div>
-
 </body>
 
 </html>

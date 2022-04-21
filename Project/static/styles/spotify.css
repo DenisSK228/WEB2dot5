@@ -1,0 +1,38 @@
+body {
+    margin: 0%;
+    height: 100%;
+    /* width: 1280px; */
+    background-image: url(/images/back_index.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+header {
+    background-color: rgb(0, 0, 0);
+    position: fixed;
+    height: 7%;
+    width: 100%;
+}
+
+#logo {
+    width: 11%;
+    margin-left: 5%;
+    height: 100%;
+}
+
+#signup {
+    width: 9%;
+    height: 100%;
+    float: right;
+    margin-right: 7.5%;
+}
+
+#main_text {
+    margin: 0;
+    color: rgb(124, 124, 124);
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}

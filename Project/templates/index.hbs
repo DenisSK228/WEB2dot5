@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify&nbsp;— Веб-плеер</title>
+    <style>
+        body {
+            margin: 0%;
+            background-color: rgb(35, 35, 35);
+        }
+
+        body,
+        html {
+            height: 100%;
+        }
+
+        .header {
+            float: left;
+            width: 20%;
+            background-color: rgb(0, 0, 0);
+            height: 100%;
+        }
+
+        #logo {
+            width: 100%;
+            height: auto;
+        }
+
+        .cards {
+            float: right;
+            width: 80%;
+            height: auto;
+            text-align: center;
+        }
+
+        .card {
+            width: 33%;
+            height: 10%;
+            background-color: rgb(50, 50, 50);
+            border-radius: 10px;
+            margin: 5%;
+            display: inline-block;
+            padding: 1%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header"><a href="/"><img id="logo" src="./images/icon3@2x.png" alt="logo"></a></div>
+
+    <div class="cards">
+
+        {{!-- {{#each id in db}} --}}
+        <div class="card"></div>
+        {{!-- {{/each}} --}}
+    </div>
+    <div class="main">
+        <audio controls preload="metadata" loop>
+            <source src="\static\tracks\aboba.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+</body>
+
+</html>
