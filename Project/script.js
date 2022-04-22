@@ -12,14 +12,10 @@ app.use(express.static('static'));
 
 app.get('/', function (req, res) {
 
-    let tracks = {
-
-    }
-
-
     res.render("Spotify.html")
 
 });
+
 app.get('/signup', function (req, res) {
 
     res.render("Signup.html")
@@ -43,6 +39,10 @@ db.serialize(function () {
         if (err) {
             console.log(err.message);
         } else {
+            // for (rows in row) {
+            //     var a = rows.param;
+            //     console.log(a);
+            // }
             console.log(row);
         }
     })
