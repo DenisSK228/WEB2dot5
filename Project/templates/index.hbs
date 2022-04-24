@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spotify&nbsp;— Веб-плеер</title>
+    <title>SpotifyFree&nbsp;— Веб-плеер</title>
     <style>
         body {
             margin: 0%;
@@ -53,13 +53,15 @@
     <div class="header"><a href="/index"><img id="logo" src="./images/icon3@2x.png" alt="logo"></a></div>
 
     <div class="cards">
-
-        <div class="card"></div>
-
+        {{#each rows}}
+        <div class="card"><img src="{{music_poster}}" alt="ERROR"> <br>
+            {{ this.autor }} - {{ this.track }}
+        </div>
+        {{/each}}
     </div>
     <div class="main">
-        <audio controls preload="metadata" loop>
-            <source src="\static\tracks\aboba.mp3" type="audio/mpeg">
+        <audio id="ap" controls preload="metadata" loop>
+            <source src="./tracks/{{music_play}}" type="audio/mpeg">
         </audio>
     </div>
 </body>
