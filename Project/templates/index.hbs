@@ -45,23 +45,43 @@
             display: inline-block;
             padding: 1%;
         }
+
+        #ic {
+            width: 5%;
+            height: 5%;
+        }
     </style>
 </head>
 
 <body>
 
-    <div class="header"><a href="/index"><img id="logo" src="./images/icon3@2x.png" alt="logo"></a></div>
+    <div class="header">
+
+        <a href="/index">
+            <img id="logo" src="./images/icon3@2x.png" alt="logo">
+        </a>
+        <a href="/playlist">
+            <button id="but"><img src="./images/menu.png" alt="" id="ic">Плейлисты</button>
+        </a><br>
+        <a href="/fav">
+            <button id="but"><img src="./images/fav.webp" alt="" id="ic">Избранное</button>
+        </a>
+
+    </div>
 
     <div class="cards">
         {{#each rows}}
-        <div class="card"><img src="{{music_poster}}" alt="ERROR"> <br>
-            {{ this.autor }} - {{ this.track }}
-        </div>
+        <button class="card">
+            <div>
+                <img src="./static/autor/{{this.autor}}/{{this.track_name}}/{{this.poster}}" alt="ERROR"> <br>
+                {{ this.autor }} &nbsp;— {{ this.track_name }}
+            </div>
+        </button>
         {{/each}}
     </div>
     <div class="main">
         <audio id="ap" controls preload="metadata" loop>
-            <source src="./tracks/{{music_play}}" type="audio/mpeg">
+            <source src="./Project/static/autor/{{this.autor}}/{{this.track}}"" type=" audio/mpeg">
         </audio>
     </div>
 </body>
