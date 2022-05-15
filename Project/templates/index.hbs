@@ -29,7 +29,7 @@
             height: auto;
         }
 
-        .cards {
+        #cards {
             float: right;
             width: 80%;
             height: auto;
@@ -69,19 +69,20 @@
 
     </div>
 
-    <div class="cards">
+    <div id="cards">
         {{#each rows}}
-        <button class="card">
+        <button class="card" id="{{ id }}" onclick="cs_change_music()">
             <div>
-                <img src="./static/autor/{{this.autor}}/{{this.track_name}}/{{this.poster}}" alt="ERROR"> <br>
+                <img src="" alt="ERROR"> <br>
                 {{ this.autor }} &nbsp;— {{ this.track_name }}
+                <button onclick="fav({{autor}})"></button>
             </div>
         </button>
         {{/each}}
     </div>
     <div class="main">
-        <audio id="ap" controls preload="metadata" loop>
-            <source src="./Project/static/autor/{{this.autor}}/{{this.track}}"" type=" audio/mpeg">
+        <audio id="ap" controls>
+            <source src="" type="audio/mp3" id="sr">
         </audio>
     </div>
 </body>

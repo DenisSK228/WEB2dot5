@@ -1,6 +1,8 @@
 {
   "dependencies": {
+    "cookie-parser": "^1.4.6",
     "express": "^4.17.3",
+    "express-session": "^1.17.3",
     "hbs": "^4.2.0",
     "nunjucks": "^3.2.3",
     "sqlite3": "^5.0.4"
