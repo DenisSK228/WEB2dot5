@@ -7,6 +7,11 @@ const cookieParser = require('cookie-parser')
 
 let secret = 'qwerty';
 
+//-------------------------------------------------Music Player----------------------------------------------------------------
+
+//-----------------------------------------------------------------------------------------------------------------------------
+//  https://ru.stackoverflow.com/questions/1236046/Переключение-музыки-на-js-по-клику-на-кнопку?answertab=modifieddesc#tab-top
+
 async function getData() {
 
     let db = new sqlite.Database("autor.db", (err) => {
@@ -68,12 +73,28 @@ app.get('/signup', function (req, res) {
 app.get("/index", function (req, res) {
     getData().then(function (rows) {
         // console.log(rows);
+        let playlist = ['{{this.track}}']
         res.render("index.hbs", rows)
 
     }, (err) => {
         res.send(err)
     })
 });
+app.get("/playlist", function (req, res) {
+
+    res.render("playlist.hbs")
+
+});
+app.get("/fav", function (req, res) {
+
+    res.render("fav.hbs")
+
+})
+
+
+
+
+
 
 app.listen(7344, function () {
     console.log("'Spotify free' started work");
